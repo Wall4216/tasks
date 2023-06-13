@@ -4,7 +4,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <div class="container">
-        <h1>Task List</h1>
+        <h1 class="mb-4">Task List</h1>
 
         @if (session('success'))
             <div class="alert alert-success">
@@ -12,9 +12,9 @@
             </div>
         @endif
 
-        <a href="{{ route('tasks.create') }}" class="btn btn-primary">Create Task</a>
+        <a href="{{ route('tasks.create') }}" class="btn btn-primary mb-4">Create Task</a>
 
-        <table class="table mt-4">
+        <table class="table table-striped">
             <thead>
             <tr>
                 <th>Title</th>
@@ -43,3 +43,15 @@
         </table>
     </div>
 @endsection
+<style>
+    /* app.css */
+
+    .table {
+        background-color: white;
+    }
+
+    h1 {
+        color: white;
+    }
+
+</style>
